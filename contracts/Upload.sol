@@ -13,7 +13,7 @@ contract Upload {
   //create add function that need user address and image url and store into value mapping
 
   
-  function allow(address user) external {//def
+  function allow(address user) external {
       ownership[msg.sender][user]=true; 
       if(previousData[msg.sender][user]){
          for(uint i=0;i<accessList[msg.sender].length;i++){
@@ -40,7 +40,7 @@ contract Upload {
 
   //create shareAccess() that return access array for perticular user
 
-  //not part of lab session
+  //not part of lab session only use for testing purpose
   Access uu;
   function checkStruct(address _user,bool val) external view returns(address,bool){
     uu.user=_user;
