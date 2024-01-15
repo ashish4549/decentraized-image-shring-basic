@@ -39,5 +39,12 @@ contract Upload {
   //create display function with input of user address external view check user ==msg.sender or they can access image or not also return value mapping for perticular user
 
   //create shareAccess() that return access array for perticular user
-  
+
+  //not part of lab session
+  Access uu;
+  function checkStruct(address _user,bool val) external view returns(address,bool){
+    uu.user=_user;
+    uu.access=val;
+    return(uu.user,uu.access);
+  }
 }
