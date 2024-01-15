@@ -3,7 +3,7 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 contract Upload {
-  //create struct Access with user address and their access
+  //create struct Access with user address and their access default false access
   
   mapping(address=>string[]) value;
   mapping(address=>mapping(address=>bool)) ownership;
