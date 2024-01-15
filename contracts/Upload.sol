@@ -42,9 +42,11 @@ contract Upload {
 
   //not part of lab session only use for testing purpose
   Access uu;
-  function checkStruct(address _user,bool val) external view returns(address,bool){
+  function setStruct(address _user,bool val) public{
     uu.user=_user;
     uu.access=val;
-    return(uu.user,uu.access);
   }
+  function getStruct() external view returns(Access){
+    return uu;
+  } 
 }
