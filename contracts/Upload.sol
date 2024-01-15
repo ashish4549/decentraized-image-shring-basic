@@ -46,7 +46,7 @@ contract Upload {
     uu.user=_user;
     uu.access=val;
   }
-  function getStruct() external view returns(Access){
+  function getStruct() external view returns(Access memory){
     return uu;
   } 
 }
